@@ -1,0 +1,234 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ol, ul, li {
+  list-style: none;
+}
+
+a, a:hover {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+}
+
+#help .help_box_in button, #hero .hero__text_btn {
+  width: 159px;
+  height: 45px;
+  background: #1EC6A7;
+  border-radius: 5px;
+  padding: 10px;
+  color: #fff;
+  transition: 0.2s;
+}
+
+#help .help_box_in button:hover, #hero .hero__text_btn:hover {
+  background: rgba(30, 198, 167, 0.5);
+}
+
+#popular .popular_block_head h3 {
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 36px;
+  color: #151515;
+  padding-top: 30px;
+  margin-left: 30px;
+  margin-right: 20px;
+}
+
+#popular .popular_block_head i {
+  width: 9px;
+  height: 5px;
+  margin-top: 40px;
+}
+
+#popular .popular_block p {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 100%;
+  color: #151515;
+  margin: 10px 30px 28px 30px;
+}
+
+.container {
+  width: 1140px;
+  margin: auto;
+}
+
+#header {
+  position: absolute;
+  width: 100%;
+  margin-top: 50px;
+}
+#header .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#header .header__logo {
+  display: flex;
+}
+#header .header__logo__line {
+  width: 0;
+  height: 30px;
+  border: 1px solid #8F8F8F;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+#header .header__logo p {
+  font-size: 14px;
+  line-height: 100%;
+  color: #8F8F8F;
+  width: 35%;
+}
+#header .header__nav {
+  display: flex;
+  align-items: center;
+}
+#header .header__nav__item {
+  margin-left: 22px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #151515;
+}
+#header .header__nav__item::after {
+  content: "";
+  width: 90%;
+  height: 0px;
+  background: rgba(30, 198, 167, 0.4);
+}
+#header .header__nav select {
+  border: 0px;
+  outline: 0px;
+  background: none;
+  appearance: none;
+  padding: 5px 20px 5px 5px;
+  background: no-repeat right url("../img/selesct.png");
+}
+
+#hero {
+  background: url("../img/bg.png") no-repeat center/cover;
+  min-height: 100vh;
+}
+#hero .hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#hero .hero__text_title {
+  font-weight: 900;
+  font-size: 72px;
+  line-height: 90%;
+  letter-spacing: -0.025em;
+  color: #151515;
+  width: 600px;
+  height: 195px;
+}
+#hero .hero__text_subtitle {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 25px;
+  color: #151515;
+  width: 555px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+#hero .hero__text_btn img {
+  margin-left: 10px;
+}
+#hero .hero__img {
+  margin-top: 78px;
+}
+
+#help {
+  margin-top: 30px;
+}
+#help .help {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#help .help_box {
+  width: 450px;
+  height: 389px;
+  background: #FFFFFF;
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin-left: 82px;
+  padding-left: 58px;
+}
+#help .help_box h1 {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 90%;
+  color: #151515;
+  padding-top: 58px;
+  padding-right: 88px;
+}
+#help .help_box h4 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 25px;
+  color: #151515;
+  margin-top: 30px;
+  margin-right: 95px;
+  margin-bottom: 30px;
+}
+#help .help_box_in input {
+  width: 105px;
+  height: 45px;
+  background: #FFFFFF;
+  border: 1px solid #8F8F8F;
+  border-radius: 6px;
+  margin-right: 82px;
+}
+#help .help_box_in button {
+  width: 146px;
+}
+
+#popular {
+  background: #EDEDED;
+}
+#popular .popular__text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#popular .popular__text h2 {
+  padding-top: 80px;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 90%;
+  color: #151515;
+  margin-bottom: 60px;
+}
+#popular .popular__text a {
+  font-size: 18px;
+  line-height: 25px;
+  color: #1EC6A7;
+  padding-top: 90px;
+}
+#popular .popular_block {
+  width: 335px;
+  height: 360px;
+  background: #FFFFFF;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.16);
+  border-radius: 5px;
+}
+#popular .popular_block_head {
+  display: flex;
+}
+#popular .popular_block img {
+  margin-left: 25px;
+  margin-right: 80px;
+  margin-bottom: 35px;
+}
+
+/*# sourceMappingURL=style.css.map */
