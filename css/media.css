@@ -1,0 +1,23 @@
+@media (max-width: 1024px) {
+  .container {
+    width: 90%;
+  }
+
+  #help .help_box h1 {
+    font-weight: 700;
+    font-size: 36px;
+    padding-right: 50px;
+    padding-top: 38px;
+  }
+  #help .help_box h4 {
+    margin-top: 20px;
+    margin-right: 5px;
+  }
+  #help .help_box_in input {
+    width: 80px;
+    height: 30px;
+    margin-right: 60px;
+  }
+}
+
+/*# sourceMappingURL=media.css.map */
