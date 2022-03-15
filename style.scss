@@ -15,7 +15,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    &__icon{
+      display: flex;
+      align-items: center;
+    }
     &__logo{
       display: flex;
       &__line{
@@ -62,6 +65,14 @@
           }
 
     }
+    &__burger{
+      width: 180px;
+      height: 120px;
+      cursor: pointer;
+      background: url("../img/close.svg") no-repeat center;
+      background-size: contain;
+    }
+
   }
 }
 #hero{
@@ -240,6 +251,7 @@
           line-height: 36px;
           color: #151515;
 
+
           i{
             font-size: 15px;
             margin-right: 20px;
@@ -253,16 +265,18 @@
             line-height: 100%;
             color: #151515;
             margin-top: 10px;
+
           }
-          img{
-            display: flex;
-            align-items: center;
+          &_img{
+            margin-top: 15px;
+            width:234px;
+          height:84px;
+
           }
           &_b{
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-top: 20%;
             left:20px;
 
 
@@ -384,7 +398,7 @@
           }
           p{
             margin-top: 20px;
-            margin-right: 120px;
+
             font-size: 18px;
             line-height: 20px;
             color: #009F8C;
@@ -412,6 +426,97 @@
     }
   }
 }
+#question{
+  margin-top: 80px;
+ .question{
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-start;
+
+   h2{
+     font-weight: 900;
+     font-size: 44px;
+     line-height: 90%;
+     color: #151515;
+   }
+
+   &_acor{
+     margin: 20px 0;
+     border: 1px solid #1EC6A7;
+     &_body{
+       width: calc(800px - 3px);
+       margin: 0 auto;
+       height: 0;
+       color: #151515;
+       background-color: white;
+       line-height: 18px;
+       padding: 0 30px;
+       box-sizing: border-box;
+       transition: color 0.5s, padding 0.5s;
+       overflow: hidden;
+       font-family: sans-serif;
+       font-size: 16px;
+
+       border-bottom: 1px solid #1EC6A7;
+
+
+
+       p{
+          margin: 0 0 10px;
+        }
+     }
+      label{
+        cursor: pointer;
+        background-color: white;
+        display: block;
+        padding: 15px 20px;
+        width: 800px;
+        color: #151515;
+        font-weight:700 ;
+        box-sizing: border-box;
+        z-index: 100;
+        font-size: 20px;
+        margin: 0 0 5px;
+        transition: color .35s;
+
+
+        &::before{
+          content: '\276F';
+          width: 12px;
+          height: 8px;
+          float: right;
+        }
+
+
+
+      }
+       input{
+         display: none;
+
+         &:checked + label{
+           background-color:white;
+           color: #151515;
+
+
+
+         }
+         &:checked+label:before{
+           transition: transform .35s;
+           transform: rotate(90deg);
+         }
+         &:checked + label + .question_acor_body{
+           height: auto;
+           margin-top: -5px;
+           color: #000;
+           padding: 20px 20px 10px;
+         }
+       }
+
+
+   }
+ }
+
+}
 #news{font-weight: 900;
   font-size: 44px;
   line-height: 90%;
@@ -421,23 +526,26 @@
   }
   .news{
     display: flex;
-    justify-content: space-between;
+    justify-content:center;
     padding-top: 36px;
+    flex-wrap: wrap;
 
     &_card{
       background: linear-gradient(0deg, rgba(23, 37, 35, 0.92), rgba(23, 37, 35, 0.92));
       border-radius: 6px;
-      width: 264px;
-      height: 327px;
+      width: 153px;
+      height: 300px;;
       margin-left: 30px;
       transition: .2s;
+      margin-bottom: 15px;
+
 
       p{
         padding-top: 30px;
         padding-left: 30px;
         padding-right: 30px;
         font-weight: bold;
-        font-size: 20px;
+        font-size: 16px;
         line-height: 27px;
 
         color: #FFFFFF;
@@ -458,9 +566,14 @@ background: #343434;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  flex-wrap: wrap;
 
-  &_block1, &_block2, &_block3{
-    h6{
+  &_block1, &_block2, &_block3
+  { margin-bottom: 15px;
+
+
+    a{
+      flex-wrap: wrap;
       font-size: 16px;
       line-height: 22px;
 
@@ -478,7 +591,7 @@ background: #343434;
 
 }
 .line{
-  width: 1400px;
+  width: 100%;
   height: 0px;
   opacity: 0.2;
   border: 1px solid #8F8F8F;
