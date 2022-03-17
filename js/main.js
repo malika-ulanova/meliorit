@@ -3,7 +3,7 @@ $('.popular_slide').slick({
     responsive:
         [
             {
-        breakpoint: 1024,
+        breakpoint: 1025,
         settings: {
             slidesToShow:3,
         }
@@ -45,3 +45,10 @@ $('.subscriptions_slide').slick({
             }
         ]
 })
+
+
+$(document).ready(function (){
+    $('.header__burger').click(function (event){
+        $('.header__burger').toggleClass('active');
+    });
+});

@@ -15,6 +15,47 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    &_hum{
+      &_burger{
+        width: 50px;
+        height: 50px;
+        background: rgb(30, 198, 167,.5);
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        &:before{
+          content: '';
+          position: absolute;
+          width: 30px;
+          height: 2px;
+          background: #fff;
+          transform: translateY(-10px);
+          box-shadow: 0 10px 0 #fff;
+          transition: .1s;
+        }
+        &.active:before{
+          transform: translateY(0) rotate(45deg);
+          box-shadow: 0 0 0 #fff;
+        }
+        &:after{
+          content: '';
+          position: absolute;
+          width: 30px;
+          height: 2px;
+          background: #fff;
+          transform: translateY(10px);
+          transition: .1s;
+        }
+
+        &.active:after{
+          transform: translateX(0) rotate(-45deg);
+          box-shadow: 0 0 0 #fff;
+        }
+      }
+    }
+
     &__icon{
       display: flex;
       align-items: center;
@@ -63,25 +104,16 @@
 
 
           }
-
     }
-    &__burger{
-      width: 180px;
-      height: 120px;
-      cursor: pointer;
-      background: url("../img/close.svg") no-repeat center;
-      background-size: contain;
-    }
-
   }
 }
 #hero{
 
   background: url("../img/bg.png") no-repeat center/cover;
   padding-top: 200px;
-  min-height: 100vh;
   .hero{
-    display: flex;
+    display: flex;  min-height: 100vh;
+
     justify-content: space-between;
     align-items: center;
 
@@ -119,7 +151,7 @@
       overflow: hidden;
 
       .hero__img {
-        width: 600px;
+        width: 40vw;
       }
     }
     //&__img{
@@ -178,10 +210,11 @@
           border: 1px solid #8F8F8F;
           border-radius: 6px;
           margin-right: 82px;
+          padding-left: 6px;
         }
         button{
           @extend %btn;
-          width: 146px;
+          width: 130px;
         }
       }
     }
@@ -223,7 +256,7 @@
         width: 30px;
         height: 20px;
         position: absolute;
-        left: -60px;
+        left: -30px;
         top: 180px;
     }
       .slick-next{
@@ -232,7 +265,7 @@
         width: 30px;
         height: 20px;
         position: absolute;
-        right: -60px;
+        right: -30px;
         top: 180px;
     }
 
@@ -268,9 +301,10 @@
 
           }
           &_img{
-            margin-top: 15px;
-            width:234px;
-          height:84px;
+            margin-top: 20px;
+
+            width: 220px;
+          height:70px;
 
           }
           &_b{
@@ -357,8 +391,8 @@
         width: 30px;
         height: 20px;
         position: absolute;
-        left: -60px;
-        top: 95px;
+        left: -30px;
+        top:70px;
       }
       .slick-next{
         font-size: 0;
@@ -366,8 +400,8 @@
         width: 30px;
         height: 20px;
         position: absolute;
-        right: -60px;
-        top: 95px;
+        right: -30px;
+        top:70px;
       }
 
       &_card{

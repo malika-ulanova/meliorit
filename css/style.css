@@ -41,6 +41,17 @@ button {
     width: 90%;
   }
 
+  #hero .hero button {
+    margin-bottom: 30px;
+  }
+
+  #subscriptions .subscriptions .slick-prev {
+    left: -40px !important;
+  }
+  #subscriptions .subscriptions .slick-next {
+    right: -40px !important;
+  }
+
   #question .question h2 {
     font-size: 1.7em !important;
     transform: translateY(2.3vw);
@@ -52,16 +63,38 @@ button {
     width: 72vw !important;
   }
 
+  #popular .popular_slide .slick-prev {
+    left: -40px !important;
+  }
+  #popular .popular_slide .slick-next {
+    right: -40px !important;
+  }
+  #popular .popular_slide_card_in_img {
+    width: 200px !important;
+    height: 50px !important;
+  }
+
+  #help .help_box {
+    width: 400px !important;
+    height: 300px !important;
+  }
   #help .help_box h1 {
-    padding-top: 1vw !important;
+    padding-top: 4vw !important;
     font-size: 3vw !important;
   }
   #help .help_box h4 {
     padding-top: 0.5vw !important;
     font-size: 1.5vw !important;
+    padding-right: 30px !important;
   }
-  #help .help_box_in input {
-    margin-bottom: 10px;
+  #help .help_box_in {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 30px !important;
+  }
+  #help .help_box_in button {
+    width: 120px !important;
   }
 
   #popular .popular_top h2, #subscriptions .subscriptions_he h2, #news h2 {
@@ -74,15 +107,46 @@ button {
     margin-bottom: 4.1vw !important;
   }
 }
+@media (max-width: 992px) {
+  #hero .hero__pic .hero__img {
+    width: 35vw !important;
+  }
+}
 @media (max-width: 768px) {
   #header .header__nav a {
     display: none !important;
+  }
+
+  #header .header label {
+    display: block;
+    right: 20px;
+    bottom: 25px;
+    font-size: 40px;
+    z-index: 1;
+  }
+  #header .header ul {
+    position: fixed;
+    min-width: 100%;
+    margin-top: -100vh;
+    background: #1EC6A7;
   }
 
   #hero .hero__text_title {
     font-size: 4vw !important;
     margin-top: -8vw !important;
     width: 50vw !important;
+  }
+
+  #question .question {
+    display: block !important;
+  }
+
+  #question .question h2 {
+    margin-bottom: 40px !important;
+  }
+
+  #help .help_box h4 {
+    margin-bottom: 10px !important;
   }
 
   #hero .hero__text_subtitle {
@@ -107,12 +171,17 @@ button {
   }
 
   #help .help_box_in button {
-    width: 16vw !important;
+    width: 25vw !important;
     margin-right: 2px !important;
+    margin-bottom: 90px;
+  }
+  #help .help_box_in button img {
+    display: none !important;
   }
 
   #help .help_box_in input {
     width: 8vw !important;
+    margin-bottom: 90px;
   }
 }
 @media (max-width: 576px) {
@@ -263,6 +332,43 @@ button {
   justify-content: space-between;
   align-items: center;
 }
+#header .header_hum_burger {
+  width: 50px;
+  height: 50px;
+  background: rgba(30, 198, 167, 0.5);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+#header .header_hum_burger:before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background: #fff;
+  transform: translateY(-10px);
+  box-shadow: 0 10px 0 #fff;
+  transition: 0.1s;
+}
+#header .header_hum_burger.active:before {
+  transform: translateY(0) rotate(45deg);
+  box-shadow: 0 0 0 #fff;
+}
+#header .header_hum_burger:after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background: #fff;
+  transform: translateY(10px);
+  transition: 0.1s;
+}
+#header .header_hum_burger.active:after {
+  transform: translateX(0) rotate(-45deg);
+  box-shadow: 0 0 0 #fff;
+}
 #header .header__icon {
   display: flex;
   align-items: center;
@@ -307,21 +413,14 @@ button {
   appearance: none;
   padding: 5px 20px 5px 5px;
 }
-#header .header__burger {
-  width: 180px;
-  height: 120px;
-  cursor: pointer;
-  background: url("../img/close.svg") no-repeat center;
-  background-size: contain;
-}
 
 #hero {
   background: url("../img/bg.png") no-repeat center/cover;
   padding-top: 200px;
-  min-height: 100vh;
 }
 #hero .hero {
   display: flex;
+  min-height: 100vh;
   justify-content: space-between;
   align-items: center;
 }
@@ -351,7 +450,7 @@ button {
   overflow: hidden;
 }
 #hero .hero__pic .hero__img {
-  width: 600px;
+  width: 40vw;
 }
 
 #help {
@@ -395,9 +494,10 @@ button {
   border: 1px solid #8F8F8F;
   border-radius: 6px;
   margin-right: 82px;
+  padding-left: 6px;
 }
 #help .help_box_in button {
-  width: 146px;
+  width: 130px;
 }
 
 #popular {
@@ -434,7 +534,7 @@ button {
   width: 30px;
   height: 20px;
   position: absolute;
-  left: -60px;
+  left: -30px;
   top: 180px;
 }
 #popular .popular_slide .slick-next {
@@ -443,7 +543,7 @@ button {
   width: 30px;
   height: 20px;
   position: absolute;
-  right: -60px;
+  right: -30px;
   top: 180px;
 }
 #popular .popular_slide_card {
@@ -477,9 +577,9 @@ button {
   margin-top: 10px;
 }
 #popular .popular_slide_card_in_img {
-  margin-top: 15px;
-  width: 234px;
-  height: 84px;
+  margin-top: 20px;
+  width: 220px;
+  height: 70px;
 }
 #popular .popular_slide_card_in_b {
   display: flex;
@@ -544,8 +644,8 @@ button {
   width: 30px;
   height: 20px;
   position: absolute;
-  left: -60px;
-  top: 95px;
+  left: -30px;
+  top: 70px;
 }
 #subscriptions .subscriptions_slide .slick-next {
   font-size: 0;
@@ -553,8 +653,8 @@ button {
   width: 30px;
   height: 20px;
   position: absolute;
-  right: -60px;
-  top: 95px;
+  right: -30px;
+  top: 70px;
 }
 #subscriptions .subscriptions_slide_card {
   margin: 0 15px;

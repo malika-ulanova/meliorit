@@ -8,6 +8,19 @@
   .container {
     width: 90%;
   }
+  #hero .hero button{
+    margin-bottom:30px;
+  }
+  #subscriptions{
+    .subscriptions{
+      .slick-prev{
+        left: -40px !important;
+      }
+      .slick-next{
+        right: -40px !important;
+      }
+    }
+  }
   #question {
     .question {
       h2 {
@@ -29,23 +42,62 @@
 
     }
   }
+  #popular{
+    .popular{
+
+      &_slide{
+
+          .slick-prev{
+            left: -40px !important;
+          }
+          .slick-next{
+            right: -40px !important;
+          }
+        &_card{
+          &_in{
+            &_img{
+              width: 200px!important;
+              height:50px!important;
+            }
+          }
+        }
+
+      }
+    }
+  }
+
+
   #help {
     .help {
-      &_box {
 
+      &_box {
+        width: 400px!important;
+        height: 300px!important;
         h1 {
-          padding-top: 1vw !important;
+          padding-top: 4vw !important;
           font-size: 3vw !important;
         }
 
         h4 {
           padding-top: 0.5vw !important;
           font-size: 1.5vw !important;
+          padding-right: 30px!important;
+
         }
 
-        &_in {
+        &_in
+
+        {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding-right: 30px!important;
           input {
-            margin-bottom: 10px;
+
+          }
+          button{
+            width: 120px !important;
+
           }
         }
       }
@@ -66,11 +118,31 @@
 
 
 @media (max-width: 992px) {
-
-}
+  #hero .hero__pic .hero__img {
+    width: 35vw !important;
+  }}
 @media (max-width: 768px) {
   #header .header__nav a {
     display: none !important;
+  }
+  #header{
+    .header{
+      label{
+        display: block;
+        right: 20px;
+        bottom: 25px;
+        font-size: 40px;
+        z-index: 1;
+
+      }
+      ul{
+        position: fixed;
+        min-width: 100%;
+        margin-top: -100vh;
+        background: #1EC6A7;
+
+      }
+    }
   }
   #hero .hero__text_title {
     font-size: 4vw !important;
@@ -81,6 +153,14 @@
   }
 
 
+  #question .question {
+    display: block!important;
+  }
+
+
+  #question .question h2 {
+    margin-bottom: 40px!important;}
+  #help .help_box h4 {margin-bottom: 10px!important;}
   #hero .hero__text_subtitle {
     font-size: 2vw !important;
     margin-top: -15vw !important;
@@ -103,12 +183,18 @@
   }
 
   #help .help_box_in button{
-    width: 16vw !important;
+    img{
+      display: none!important;
+    }
+    width: 25vw !important;
     margin-right: 2px !important;
+    margin-bottom: 90px;
   }
 
   #help .help_box_in input {
     width: 8vw !important;
+    margin-bottom: 90px;
+
   }
 }
 @media (max-width: 576px) {
