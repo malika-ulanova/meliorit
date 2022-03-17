@@ -158,8 +158,7 @@
   }
 
 
-  #question .question h2 {
-    margin-bottom: 40px!important;}
+  #question .question h2 {margin-bottom: 40px!important;}
   #help .help_box h4 {margin-bottom: 10px!important;}
   #hero .hero__text_subtitle {
     font-size: 2vw !important;
@@ -200,6 +199,9 @@
 @media (max-width: 576px) {
   #help .help_box{
     padding-left: 4vw !important;
+    width: 300px!important;
+    height: 180px!important;
+
   }
   #help .help_box_in input {
   margin-right: 15px !important;
@@ -211,6 +213,27 @@
   #question .question_acor_body {
     font-size: 2vw !important;
 
+  }
+  #popular{
+    .popular{
+
+      &_slide{
+
+        .slick-prev{
+          display: none!important;
+        }
+        .slick-next{
+          display: none!important;
+        }}}}
+  #subscriptions{
+    .subscriptions{
+      .slick-prev{
+        display: none !important;
+      }
+      .slick-next{
+        display: none !important;
+      }
+    }
   }
 }
 @media (max-width: 414px) {

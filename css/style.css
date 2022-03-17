@@ -187,6 +187,8 @@ button {
 @media (max-width: 576px) {
   #help .help_box {
     padding-left: 4vw !important;
+    width: 300px !important;
+    height: 180px !important;
   }
 
   #help .help_box_in input {
@@ -199,6 +201,20 @@ button {
 
   #question .question_acor_body {
     font-size: 2vw !important;
+  }
+
+  #popular .popular_slide .slick-prev {
+    display: none !important;
+  }
+  #popular .popular_slide .slick-next {
+    display: none !important;
+  }
+
+  #subscriptions .subscriptions .slick-prev {
+    display: none !important;
+  }
+  #subscriptions .subscriptions .slick-next {
+    display: none !important;
   }
 }
 @media (max-width: 414px) {
